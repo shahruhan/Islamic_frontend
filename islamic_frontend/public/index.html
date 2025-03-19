@@ -178,7 +178,7 @@
       border-bottom: 2px solid #db9e30;
     border-radius: 0 !important;
     }
-    button {
+    button{
       position: relative;
       display: block;
       text-align: left;
@@ -190,16 +190,8 @@
       border: none;
       background: transparent;
       outline: none;
-      &:hover, &:focus {
-        cursor: pointer;
-        &::after {
-          cursor: pointer;
-        }
-      }
-      .accordion-title {
-        padding: 1em 1.5em 1em 0;
-      }
-      .icon {
+    }
+    button .icon {
         display: inline-block;
         position: absolute;
         top: 18px;
@@ -208,7 +200,8 @@
         height: 22px;
         border: 1px solid;
         border-radius: 22px;
-        &::before {
+    }
+    button .icon::before{
           display: block;
           position: absolute;
           content: '';
@@ -217,8 +210,8 @@
           width: 10px;
           height: 2px;
           background: currentColor;
-        }
-        &::after {
+    }
+    button .icon::after{
           display: block;
           position: absolute;
           content: '';
@@ -227,39 +220,39 @@
           width: 2px;
           height: 10px;
           background: currentColor;
-        }
-      }
+    }
+    button :hover, button :focus, button ::after{
+      cursor: pointer;
     }
     button span{
     color: #db9e30;
     }
-    button[aria-expanded='true'] {
-      .icon {
-        &::after {
+    button[aria-expanded='true'] .icon::after{      
           width: 0;
-        }
-      }
-      + .accordion-content {
+    }
+    .accordion-content.open{
         opacity: 1;
         max-height: 9em;
         transition: all 200ms linear;
         will-change: opacity, max-height;
       }
-    }
     .accordion-content {
       opacity: 0;
       max-height: 0;
       overflow: hidden;
       transition: opacity 200ms linear, max-height 200ms linear;
       will-change: opacity, max-height;
-      p {
+    }
+    .accordion-title {
+        padding: 1em 1.5em 1em 0;
+      }
+    .accordion-content p {
         font-size: 1rem;
         font-weight: 300;
         margin: 2em 0;
       color: #db9e30;
       text-align: left;
       }
-    }
     @media ((min-width: 1200px)) {
       .container{
       max-width: 1255px;
