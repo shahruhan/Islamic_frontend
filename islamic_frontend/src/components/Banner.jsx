@@ -38,7 +38,7 @@ const HomeBanner = () => {
 														<a className="btn-bnr" href="index.html">Discover Library</a>
 													<a className="btn-bnr2" href="index.html">Learn More</a>
 													</div>
-													<div className="row mt-5">
+													<div className="row mt-5 mb-5">
 														<div className="col-lg-4 col-md-4 col-sm-12 count">
 															<h3><CountUp className="number" delay={3} enableScrollSpy={true} scrollSpyDelay={1} duration={5} end={10542}/> +</h3>
 															<p>Resources Varified</p>
